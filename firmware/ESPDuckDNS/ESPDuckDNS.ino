@@ -344,7 +344,7 @@ void wifiManagerConnecting() {
 #endif
   wifiManager.setConfigPortalTimeout(180);
   wifiManager.setAPCallback(wifiManagerConfigModeCallback);
-  if(!wifiManager.autoConnect("ESPDuckDNS-AP")) {
+  if(!wifiManager.autoConnect("ESPDuckDNS-AP","DuckDNSConfig")) {
 #if defined WIFIMANAGERSETSTATUS_SERIALENABLED
     Serial.println("Failed to connect and hit timeout, restarting");
 #endif
